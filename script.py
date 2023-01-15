@@ -57,7 +57,7 @@ for radek in pole_radku:
 instrukce_stroju[id_stroje]=instrukce_stroje
 
 #getting min_x,max_x,min_y,max_y
-def ziskejExtremniHodnotyXY():
+def vypisExtremniHodnotyXY():
     prvni_pruchod = True
     for instrukce_stroje in instrukce_stroju:
         for instrukce in instrukce_stroju[instrukce_stroje]:
@@ -111,10 +111,10 @@ def zapisDoSouboru():
 #doing the stuff according to arguments
 for parametr in args[1:len(args)]:
     if parametr=="-funkce1":
-        ziskejExtremniHodnotyXY()
-    elif parametr=="-funkce2":
         pridej10()
+    elif parametr=="-funkce2":
+        vypisExtremniHodnotyXY()
     else:
         print(f"{parametr} je neplatný parametr")
-if "-funkce2" in args:
+if "-funkce1" in args:
     zapisDoSouboru()
